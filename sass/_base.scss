@@ -1,0 +1,296 @@
+///Colors
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0, 0, 0);
+
+$color-red: hsl(1, 90%, 64%);
+$color-blue: hsl(219, 85%, 26%);
+
+$color-very-light-grayish-blue: hsl(210, 60%, 98%);
+$color-light-grayish-blue-1: hsl(211, 68%, 94%);
+$color-light-grayish-blue-2: hsl(205, 33%, 90%);
+$color-grayish-blue: hsl(219, 14%, 63%);
+$color-dark-grayish-blue: hsl(219, 12%, 42%);
+$color-very-dark-blue: hsl(224, 21%, 14%);
+
+///breakpoints
+///
+$bp-1000: 62.5em;
+$bp-1200: 75em;
+
+///Fonts
+
+$ft-bold: 800;
+$ft-semibold: 600;
+$ft-normal-500: 500;
+$ft-normal-400: 400;
+
+///RESETS
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+///BEGIN
+///
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; ////defines
+    @media only screen and (min-width: $bp-1200) {
+        font-size: 70%;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @media only screen and (min-width: $bp-1000) {
+        background-color: $color-very-light-grayish-blue;
+    }
+}
+
+///Typography
+
+.heading-first {
+    color: $color-very-dark-blue;
+    font-size: 2rem;
+    @media only screen and (min-width: $bp-1200) {
+        font-size: 2.2rem;
+    }
+}
+
+.heading-second {
+    font-size: 1.4rem;
+    display: inline;
+}
+
+.heading-tertiary {
+    font-size: 1.4rem;
+    font-weight: $ft-bold;
+    &--gray {
+        color: $color-dark-grayish-blue;
+    }
+    &--blue {
+        color: $color-blue;
+    }
+}
+
+///Link animation
+a {
+    transition: all 0.2s;
+    &:hover {
+        color: $color-blue;
+    }
+}
+
+///Total container
+///
+.container {
+    background-color: $color-white;
+    padding: 0 1.6rem;
+    display: grid;
+    padding-bottom: 2rem;
+    @media only screen and (min-width: $bp-1000) {
+        padding: 0.6rem 3rem;
+        border-radius: 2rem;
+        margin: 5.5rem 20.5rem;
+        box-shadow: 1rem 1rem 5rem rgba($color-light-grayish-blue-2, 0.1);
+    }
+
+    @media only screen and (min-width: $bp-1200) {
+        padding: 0.6rem 3rem;
+        border-radius: 2rem;
+        margin: 5.5rem 31.5rem;
+        box-shadow: 1rem 1rem 5rem rgba($color-light-grayish-blue-2, 0.1);
+    }
+}
+
+///Notification header
+///
+.header {
+    padding: 2.4rem 0;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (min-width: $bp-1200) {
+        padding: 2.5rem 0;
+    }
+    &__name {
+        display: flex;
+    }
+
+    &__amount {
+        margin-left: 0.8rem;
+        line-height: 1;
+
+        font-weight: $ft-semibold;
+        padding: 0.3rem 1.2rem;
+        border-radius: 0.7rem;
+
+        background-color: $color-blue;
+        color: $color-white;
+        font-size: 1.6rem;
+        a:hover {
+            color: $color-red;
+        }
+        @media only screen and (min-width: $bp-1200) {
+            padding: 0rem 1rem;
+            line-height: 2;
+            font-size: 1.4rem;
+            justify-self: center;
+        }
+    }
+    &__marker {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: $ft-normal-500;
+        color: $color-dark-grayish-blue;
+    }
+}
+
+////All posts
+///
+.posts {
+    display: grid;
+    grid-row-gap: 0.9rem;
+    @media only screen and (min-width: $bp-1200) {
+        grid-row-gap: 0.6rem;
+    }
+}
+
+///Post
+///
+.post {
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+    grid-template-rows: max-content 1fr;
+    padding: 1.6rem;
+
+    @media only screen and (min-width: $bp-1200) {
+        padding: 1.8rem 1.8rem 1.5rem;
+    }
+
+    &--active {
+        background-color: $color-very-light-grayish-blue;
+        border-radius: 1rem;
+    }
+
+    &__avatar {
+        width: 3.9rem;
+        grid-row: 1/4;
+        object-fit: cover;
+        margin-right: 1.4rem;
+        cursor: pointer;
+        @media only screen and (min-width: $bp-1200) {
+            width: 4rem;
+            margin-right: 1.6rem;
+        }
+    }
+    &__common {
+        & > * {
+            display: inline;
+            margin-right: 0.3rem;
+            letter-spacing: 0.01rem;
+            line-height: 1.3;
+        }
+    }
+    &__user-action {
+        color: $color-dark-grayish-blue;
+        font-size: 1.4rem;
+        font-weight: $ft-normal-500;
+    }
+
+    &__online {
+        color: $color-red;
+        font-size: 2.2rem;
+        line-height: 0;
+    }
+
+    &__publication-date {
+        padding-top: 0.3rem;
+        font-size: 1.4rem;
+        grid-column: auto;
+        font-weight: $ft-normal-500;
+        color: $color-grayish-blue;
+    }
+
+    &__message {
+        grid-column: 2;
+        font-size: 1.4rem;
+        color: $color-dark-grayish-blue;
+        padding: 1.5rem;
+        border: 1px solid $color-light-grayish-blue-2;
+        margin-top: 1.2rem;
+        border-radius: 0.5rem;
+        transition: 0.2s all;
+        &:hover {
+            cursor: pointer;
+            background-color: $color-light-grayish-blue-1;
+        }
+        @media only screen and (min-width: $bp-1200) {
+            padding: 1.4rem 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__image {
+        grid-column: 3;
+        grid-row: 1/-1;
+        width: 5rem;
+        border-radius: 1rem;
+        border: 4px solid transparent;
+
+        margin-left: 2rem;
+        transition: all 0.2s;
+        &:hover {
+            cursor: pointer;
+            border: 4px solid $color-light-grayish-blue-2;
+        }
+    }
+}

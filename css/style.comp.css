@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 70%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+@media only screen and (min-width: 62.5em) {
+  body {
+    background-color: hsl(210, 60%, 98%);
+  }
+}
+
+.heading-first {
+  color: hsl(224, 21%, 14%);
+  font-size: 2rem;
+}
+@media only screen and (min-width: 75em) {
+  .heading-first {
+    font-size: 2.2rem;
+  }
+}
+
+.heading-second {
+  font-size: 1.4rem;
+  display: inline;
+}
+
+.heading-tertiary {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.heading-tertiary--gray {
+  color: hsl(219, 12%, 42%);
+}
+.heading-tertiary--blue {
+  color: hsl(219, 85%, 26%);
+}
+
+a {
+  transition: all 0.2s;
+}
+a:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 0 1.6rem;
+  display: grid;
+  padding-bottom: 2rem;
+}
+@media only screen and (min-width: 62.5em) {
+  .container {
+    padding: 0.6rem 3rem;
+    border-radius: 2rem;
+    margin: 5.5rem 20.5rem;
+    box-shadow: 1rem 1rem 5rem rgba(221, 231, 238, 0.1);
+  }
+}
+@media only screen and (min-width: 75em) {
+  .container {
+    padding: 0.6rem 3rem;
+    border-radius: 2rem;
+    margin: 5.5rem 31.5rem;
+    box-shadow: 1rem 1rem 5rem rgba(221, 231, 238, 0.1);
+  }
+}
+
+.header {
+  padding: 2.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 75em) {
+  .header {
+    padding: 2.5rem 0;
+  }
+}
+.header__name {
+  display: flex;
+}
+.header__amount {
+  margin-left: 0.8rem;
+  line-height: 1;
+  font-weight: 600;
+  padding: 0.3rem 1.2rem;
+  border-radius: 0.7rem;
+  background-color: hsl(219, 85%, 26%);
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+}
+.header__amount a:hover {
+  color: hsl(1, 90%, 64%);
+}
+@media only screen and (min-width: 75em) {
+  .header__amount {
+    padding: 0rem 1rem;
+    line-height: 2;
+    font-size: 1.4rem;
+    justify-self: center;
+  }
+}
+.header__marker {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: hsl(219, 12%, 42%);
+}
+
+.posts {
+  display: grid;
+  grid-row-gap: 0.9rem;
+}
+@media only screen and (min-width: 75em) {
+  .posts {
+    grid-row-gap: 0.6rem;
+  }
+}
+
+.post {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: max-content 1fr;
+  padding: 1.6rem;
+}
+@media only screen and (min-width: 75em) {
+  .post {
+    padding: 1.8rem 1.8rem 1.5rem;
+  }
+}
+.post--active {
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 1rem;
+}
+.post__avatar {
+  width: 3.9rem;
+  grid-row: 1/4;
+  object-fit: cover;
+  margin-right: 1.4rem;
+  cursor: pointer;
+}
+@media only screen and (min-width: 75em) {
+  .post__avatar {
+    width: 4rem;
+    margin-right: 1.6rem;
+  }
+}
+.post__common > * {
+  display: inline;
+  margin-right: 0.3rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.3;
+}
+.post__user-action {
+  color: hsl(219, 12%, 42%);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.post__online {
+  color: hsl(1, 90%, 64%);
+  font-size: 2.2rem;
+  line-height: 0;
+}
+.post__publication-date {
+  padding-top: 0.3rem;
+  font-size: 1.4rem;
+  grid-column: auto;
+  font-weight: 500;
+  color: hsl(219, 14%, 63%);
+}
+.post__message {
+  grid-column: 2;
+  font-size: 1.4rem;
+  color: hsl(219, 12%, 42%);
+  padding: 1.5rem;
+  border: 1px solid hsl(205, 33%, 90%);
+  margin-top: 1.2rem;
+  border-radius: 0.5rem;
+  transition: 0.2s all;
+}
+.post__message:hover {
+  cursor: pointer;
+  background-color: hsl(211, 68%, 94%);
+}
+@media only screen and (min-width: 75em) {
+  .post__message {
+    padding: 1.4rem 2rem;
+    margin-bottom: 1rem;
+  }
+}
+.post__image {
+  grid-column: 3;
+  grid-row: 1/-1;
+  width: 5rem;
+  border-radius: 1rem;
+  border: 4px solid transparent;
+  margin-left: 2rem;
+  transition: all 0.2s;
+}
+.post__image:hover {
+  cursor: pointer;
+  border: 4px solid hsl(205, 33%, 90%);
+}
+
+/*# sourceMappingURL=style.comp.css.map */

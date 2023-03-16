@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <!-- Container-->
+    <main class="container">
+      <!--Notification header-->
+      <section class="header">
+        <div class="header__name">
+          <h1 class="heading-first">Notifications</h1>
+          <span class="header__amount"><a href="#">3</a></span>
+        </div>
+        <a class="header__marker" href="#">Mark all as read</a>
+      </section>
+      <!--all posts section-->
+      <section class="posts">
+        <!--Post 1 Mark Webber-->
+        <article class="post post--active">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-mark-webber.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Mark Webber</a></h2>
+            <p class="post__user-action">reacted to your recent post</p>
+            <h3 class="heading-tertiary heading-tertiary--gray">
+              <a href="#">My first tournament today!</a>
+            </h3>
+            <span class="post__online">&bull;</span>
+          </div>
+          <p class="post__publication-date">1m ago</p>
+        </article>
+        <!--Post 2 Angela Gray-->
+        <article class="post post--active">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-angela-gray.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Angela Gray</a></h2>
+            <p class="post__user-action">followed you</p>
+            <span class="post__online">&bull;</span>
+          </div>
+          <p class="post__publication-date">5m ago</p>
+        </article>
+        <!--Post 3 Jacob Thompson-->
+        <article class="post post--active">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-jacob-thompson.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Jacob Thompson</a></h2>
+            <p class="post__user-action">has joined your group</p>
+            <h3 class="heading-tertiary heading-tertiary--blue">
+              <a href="#">Chess Club</a>
+            </h3>
+            <span class="post__online">&bull;</span>
+          </div>
+          <p class="post__publication-date">1 day ago</p>
+        </article>
+        <!--Post 4 Rizky-->
+        <article class="post">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-rizky-hasanuddin.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Rizky Hasanuddin</a></h2>
+            <p class="post__user-action">sent you a private message</p>
+          </div>
+          <p class="post__publication-date">5days ago</p>
+
+          <p class="post__message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
+          </p>
+        </article>
+        <!--Post 5 Kimberly-->
+        <article class="post">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-kimberly-smith.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Kimberly Smith</a></h2>
+            <p class="post__user-action">commented on your picture</p>
+          </div>
+          <p class="post__publication-date">1 week ago</p>
+
+          <img
+            src="assets/images/image-chess.webp"
+            alt="topic image"
+            class="post__image"
+          />
+        </article>
+        <!--Post 6 Nathan Peterson-->
+        <article class="post">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-nathan-peterson.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Nathan Peterson</a></h2>
+            <p class="post__user-action">reacted to your recent post</p>
+            <h3 class="heading-tertiary heading-tertiary--gray">
+              <a href="#">5 end-game strategies to increase your win rate</a>
+            </h3>
+          </div>
+          <p class="post__publication-date">2 weeks ago</p>
+        </article>
+        <!--Post 7 Anna Kim-->
+        <article class="post">
+          <img
+            class="post__avatar"
+            src="assets/images/avatar-anna-kim.webp"
+            alt="user pic"
+          />
+          <div class="post__common">
+            <h2 class="heading-second"><a href="#">Anna Kim</a></h2>
+            <p class="post__user-action">left the group</p>
+            <h3 class="heading-tertiary heading-tertiary--blue">
+              <a href="#">Chess Club</a>
+            </h3>
+          </div>
+          <p class="post__publication-date">2 weeks ago</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
